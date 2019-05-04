@@ -1,0 +1,16 @@
+<div>
+  <p>users works!</p>
+  <div><button (click)="showNewUserForm()">Add User</button></div>
+  <table border='1'>
+    <tr *ngFor="let user of users; let i = index;">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.email}}</td>
+      <button (click)="deleteUser(user.id)">Delete</button>
+    </tr>
+  </table>
+</div>
+<newuser [newUser]="isNewUser" [users]="users"></newuser>
+
